@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="umQ-75-a4M" customClass="SampleShimmerCollectionViewCell" customModule="FAShimmerViews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-87-6Mc" customClass="FAView" customModule="FAShimmerViews" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HPD-5A-man">
+                                <rect key="frame" x="8" y="8" width="144" height="144"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSL-bf-Jui">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="84"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3FV-tU-89X" customClass="FAShimmerImageView" customModule="FAShimmerViews" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="9.5" width="65" height="65"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.17722602740000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="BgU-sI-dD9"/>
+                                                    <constraint firstAttribute="width" constant="65" id="SIn-j6-wmO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3FV-tU-89X" firstAttribute="centerY" secondItem="DSL-bf-Jui" secondAttribute="centerY" id="4Pw-rw-7Cb"/>
+                                            <constraint firstItem="3FV-tU-89X" firstAttribute="leading" secondItem="DSL-bf-Jui" secondAttribute="leading" constant="5" id="SX2-8R-UDT"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wCr-dm-1VE">
+                                        <rect key="frame" x="0.0" y="84" width="144" height="60"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-3d-fzX">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj8-bc-TSF" customClass="FAShimmerLabelView" customModule="FAShimmerViews" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="16" width="134" height="15"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.17722602740000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="3XM-44-JPk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                                        <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO8-31-2vl" customClass="FAShimmerLabelView" customModule="FAShimmerViews" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="35" width="87" height="15"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.17722602740000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="vj9-2L-8mx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                                        <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="0.69571382709999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Yj8-bc-TSF" secondAttribute="trailing" constant="5" id="C9U-8f-EKs"/>
+                                                    <constraint firstItem="Yj8-bc-TSF" firstAttribute="top" secondItem="aJP-3d-fzX" secondAttribute="top" constant="16" id="Ljf-PU-flZ"/>
+                                                    <constraint firstItem="sO8-31-2vl" firstAttribute="width" secondItem="Yj8-bc-TSF" secondAttribute="width" multiplier="0.65" id="Pr1-CE-bkM"/>
+                                                    <constraint firstItem="Yj8-bc-TSF" firstAttribute="leading" secondItem="aJP-3d-fzX" secondAttribute="leading" constant="5" id="U3M-vj-5PG"/>
+                                                    <constraint firstItem="sO8-31-2vl" firstAttribute="leading" secondItem="aJP-3d-fzX" secondAttribute="leading" constant="5" id="XjA-wO-d1O"/>
+                                                    <constraint firstItem="sO8-31-2vl" firstAttribute="top" secondItem="Yj8-bc-TSF" secondAttribute="bottom" constant="4" id="lgU-Bz-72P"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="PQA-32-mRG"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HPD-5A-man" firstAttribute="leading" secondItem="gaa-87-6Mc" secondAttribute="leading" constant="8" id="UM8-YY-ckU"/>
+                            <constraint firstAttribute="bottom" secondItem="HPD-5A-man" secondAttribute="bottom" constant="8" id="eu0-0X-cn5"/>
+                            <constraint firstItem="HPD-5A-man" firstAttribute="top" secondItem="gaa-87-6Mc" secondAttribute="top" constant="8" id="rWc-xJ-svR"/>
+                            <constraint firstAttribute="trailing" secondItem="HPD-5A-man" secondAttribute="trailing" constant="8" id="vfM-88-xpv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gaa-87-6Mc" secondAttribute="trailing" id="BYW-yD-VqT"/>
+                <constraint firstItem="gaa-87-6Mc" firstAttribute="leading" secondItem="umQ-75-a4M" secondAttribute="leading" id="Jpa-jQ-RoK"/>
+                <constraint firstAttribute="bottom" secondItem="gaa-87-6Mc" secondAttribute="bottom" id="WNQ-Ds-BR9"/>
+                <constraint firstItem="gaa-87-6Mc" firstAttribute="top" secondItem="umQ-75-a4M" secondAttribute="top" id="hys-eb-DGA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jGL-VS-LDZ"/>
+            <point key="canvasLocation" x="78" y="55"/>
+        </collectionViewCell>
+    </objects>
+</document>
