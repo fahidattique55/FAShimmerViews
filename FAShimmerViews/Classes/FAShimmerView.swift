@@ -8,58 +8,19 @@
 
 import UIKit
 
-class FAShimmerView: UIView {
-    
-    override func awakeFromNib() {
+extension UIView {
+    open override func awakeFromNib() {
         super.awakeFromNib()
-        configureAndStartShimmering()
+        if let label = self.shrimmAble {
+            if label.count > 0 {
+                configureAndStartShimmering()
+            }
+        }
+        else {
+            stopShimmering()
+        }
     }
 }
-
-
-
-
-
-
-class FAShimmerImageView: UIImageView {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-class FAShimmerButtonView: UIButton {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-class FAShimmerLabelView: UILabel {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-
-
-
 
 extension UIView {
     
@@ -69,25 +30,7 @@ extension UIView {
         startShimmering()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 extension UIView {
-    
-    
     func startShimmering() {
         
         let light = UIColor(white: 0, alpha: 0.1).cgColor
@@ -114,10 +57,27 @@ extension UIView {
         gradient.add(animation, forKey: "shimmer")
     }
 
-    
-    
     func stopShimmering() {
         
         layer.mask = nil
+    }
+}
+
+
+extension UIView {
+    
+    struct shrimmAbleProperty {
+        static var shrimmAble: String? = nil
+    }
+    @IBInspectable
+    var shrimmAble: String?{
+        get {
+            return objc_getAssociatedObject(self, &shrimmAbleProperty.shrimmAble) as? String
+        }
+        set {
+            if let new = newValue {
+                objc_setAssociatedObject(self, &shrimmAbleProperty.shrimmAble, new, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
     }
 }

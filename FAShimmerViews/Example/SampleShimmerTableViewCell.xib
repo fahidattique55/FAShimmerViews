@@ -28,7 +28,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypW-ry-NW5">
                                         <rect key="frame" x="0.0" y="0.0" width="264" height="13"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvH-db-gzy" customClass="FAShimmerLabelView" customModule="FAShimmerViews" customModuleProvider="target">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvH-db-gzy">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="13"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -47,11 +47,14 @@
                                             <constraint firstItem="VvH-db-gzy" firstAttribute="top" secondItem="ypW-ry-NW5" secondAttribute="top" id="b8z-zo-gIe"/>
                                             <constraint firstItem="VvH-db-gzy" firstAttribute="leading" secondItem="ypW-ry-NW5" secondAttribute="leading" id="kpK-D1-ZqY"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shrimmAble" value="yes"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KU0-bl-rE0">
                                         <rect key="frame" x="0.0" y="33" width="264" height="13.5"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-h6-n0P" customClass="FAShimmerLabelView" customModule="FAShimmerViews" customModuleProvider="target">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-h6-n0P">
                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -69,11 +72,14 @@
                                             <constraint firstItem="7ov-h6-n0P" firstAttribute="top" secondItem="KU0-bl-rE0" secondAttribute="top" id="RQZ-R8-BhL"/>
                                             <constraint firstItem="7ov-h6-n0P" firstAttribute="leading" secondItem="KU0-bl-rE0" secondAttribute="leading" id="kWE-Ec-CbQ"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shrimmAble" value="yes"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVO-P6-Mcx">
                                         <rect key="frame" x="0.0" y="66.5" width="264" height="13.5"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-hJ-1n1" customClass="FAShimmerLabelView" customModule="FAShimmerViews" customModuleProvider="target">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-hJ-1n1">
                                                 <rect key="frame" x="0.0" y="0.0" width="158.5" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -91,6 +97,9 @@
                                             <constraint firstAttribute="bottom" secondItem="PZx-hJ-1n1" secondAttribute="bottom" id="Jfr-EX-Tcn"/>
                                             <constraint firstItem="PZx-hJ-1n1" firstAttribute="top" secondItem="eVO-P6-Mcx" secondAttribute="top" id="p5n-IP-aTp"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="shrimmAble" value="yes"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
