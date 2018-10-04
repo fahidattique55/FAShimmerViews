@@ -100,15 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D70D08A2163CB9A00E61962 /* ReadMe Info */ = {
-			isa = PBXGroup;
-			children = (
-				2D70D0832163CAFB00E61962 /* LICENSE */,
-				2D70D0842163CAFC00E61962 /* README.md */,
-			);
-			path = "ReadMe Info";
-			sourceTree = "<group>";
-		};
 		2DAAAA282160D6A8005B1744 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +123,8 @@
 		2DAAAA332160D6A8005B1744 /* FAShimmerViews */ = {
 			isa = PBXGroup;
 			children = (
+				2D70D0832163CAFB00E61962 /* LICENSE */,
+				2D70D0842163CAFC00E61962 /* README.md */,
 				2DAAAA622160D727005B1744 /* Example */,
 				2DAAAA632160D744005B1744 /* Classes */,
 			);
@@ -159,7 +152,6 @@
 		2DAAAA622160D727005B1744 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				2D70D08A2163CB9A00E61962 /* ReadMe Info */,
 				2DAAAA342160D6A8005B1744 /* AppDelegate.swift */,
 				2DAAAA362160D6A8005B1744 /* ViewController.swift */,
 				2DAAAA382160D6A8005B1744 /* Main.storyboard */,
