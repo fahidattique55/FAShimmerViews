@@ -8,58 +8,19 @@
 
 import UIKit
 
-class FAShimmerView: UIView {
-    
-    override func awakeFromNib() {
+extension UIView {
+    open override func awakeFromNib() {
         super.awakeFromNib()
-        configureAndStartShimmering()
+        if let label = self.shrimmAble {
+            if label.count > 0 {
+                configureAndStartShimmering()
+            }
+        }
+        else {
+            stopShimmering()
+        }
     }
 }
-
-
-
-
-
-
-class FAShimmerImageView: UIImageView {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-class FAShimmerButtonView: UIButton {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-class FAShimmerLabelView: UILabel {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureAndStartShimmering()
-    }
-}
-
-
-
-
-
-
-
-
 
 extension UIView {
     
@@ -69,25 +30,7 @@ extension UIView {
         startShimmering()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 extension UIView {
-    
-    
     func startShimmering() {
         
         let light = UIColor(white: 0, alpha: 0.1).cgColor
@@ -104,9 +47,15 @@ extension UIView {
         layer.mask = gradient
         
         let animation: CABasicAnimation = CABasicAnimation.init(keyPath: "locations")
-        animation.fromValue = [0.0, 0.1, 0.2]
-        animation.toValue   = [0.8, 0.9, 1.0]
         
+        if UIView.userInterfaceLayoutDirection(for: self.semanticContentAttribute) == .rightToLeft{
+            animation.fromValue = [0.8, 0.9, 1.0]
+            animation.toValue   = [0.0, 0.1, 0.2]
+        }
+        else {
+            animation.fromValue = [0.0, 0.1, 0.2]
+            animation.toValue   = [0.8, 0.9, 1.0]
+        }
         animation.duration = 1.5
         animation.repeatCount = Float.greatestFiniteMagnitude
         animation.isRemovedOnCompletion = false
@@ -114,10 +63,27 @@ extension UIView {
         gradient.add(animation, forKey: "shimmer")
     }
 
-    
-    
     func stopShimmering() {
         
         layer.mask = nil
+    }
+}
+
+
+extension UIView {
+    
+    struct shrimmAbleProperty {
+        static var shrimmAble: String? = nil
+    }
+    @IBInspectable
+    var shrimmAble: String?{
+        get {
+            return objc_getAssociatedObject(self, &shrimmAbleProperty.shrimmAble) as? String
+        }
+        set {
+            if let new = newValue {
+                objc_setAssociatedObject(self, &shrimmAbleProperty.shrimmAble, new, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
     }
 }
