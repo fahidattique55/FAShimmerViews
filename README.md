@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <a href="https://i.imgur.com/c1ucNEW.gifv">
+    <a href="https://i.imgur.com/c1ucNEW.gif">
         <img src="https://i.imgur.com/c1ucNEW.gif" height="450">
     </a>
 </p>
@@ -20,7 +20,6 @@
 
 
 ## Apps Using FAShimmerViews
----
 
 - FanTazTech (https://itunes.apple.com/us/app/fantaztech/id1334853147?ls=1&mt=8)
 - FTT Tech (https://itunes.apple.com/us/app/ftt-tech/id1376054178?ls=1&mt=8)
@@ -34,7 +33,6 @@
 
 
 ## Features
----
 
 - [x] Add Simple/Comples Shimmering affects in your application with no coding.
 - [x] You can make custom shimmer views very easily with out any coding
@@ -79,22 +77,33 @@
 
 ## Shimmer Sample Previews
 
-| Listing TableView Cells | 
-| --- |
-| ![](https://i.imgur.com/5a6zyO1.gif) |
+### Listing TableView Cells
+
+<p align="center">
+    <a href="https://i.imgur.com/5a6zyO1.gif">
+        <img src="https://i.imgur.com/5a6zyO1.gif" height="450">
+    </a>
+</p>
 
 
 
-| Listing CollectionView Cells - Sample 1 | 
-| --- |
-| ![](https://i.imgur.com/SDbqm4i.gif) |
+### Listing CollectionView Cells - Sample 1 
+
+<p align="center">
+    <a href="https://i.imgur.com/SDbqm4i.gif">
+        <img src="https://i.imgur.com/SDbqm4i.gif" height="450">
+    </a>
+</p>
 
 
 
-| Listing CollectionView Cells - Sample 2 | 
-| --- |
-| ![](https://i.imgur.com/3wiqT1S.gif) |
+### Listing CollectionView Cells - Sample 2 
 
+<p align="center">
+    <a href="https://i.imgur.com/3wiqT1S.gif">
+        <img src="https://i.imgur.com/3wiqT1S.gif" height="450">
+    </a>
+</p>
 
 
 
