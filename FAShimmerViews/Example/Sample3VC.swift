@@ -13,154 +13,52 @@ class Sample3VC: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    
-    
-    
-    
-    
-    
-    
+   
     // MARK: - Class Properties
     
     fileprivate let identifier = "shimmerCell"
-    
-    
-    
-    
-    
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         viewConfigurations()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     // MARK: - Functions
     
     func viewConfigurations() {
-        
         collectionView.register(UINib(nibName: "SampleShimmerCollectionViewCell1", bundle: nil), forCellWithReuseIdentifier: identifier)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    // MARK: - IBActions
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 extension Sample3VC: UICollectionViewDataSource {
     
     // MARK:- UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! SampleShimmerCollectionViewCell1
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 extension Sample3VC: UICollectionViewDelegate {
-    
     
     // MARK:- UICollectionViewDelegate
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return 10
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 extension Sample3VC: UICollectionViewDelegateFlowLayout {
-    
     
     // MARK:- UICollectionViewDelegateFlowLayout
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {        
         let width = (UIScreen.main.bounds.size.width - 60) / 2
         var height: CGFloat = 0.0
         

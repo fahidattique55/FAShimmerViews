@@ -15,96 +15,26 @@ class Sample1VC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-
-    
-    
-    
-    
-    
-    
     // MARK: - Class Properties
     
     fileprivate let identifier = "shimmerCell"
 
-    
-    
-    
-    
-    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         viewConfigurations()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     // MARK: - Functions
     
     func viewConfigurations() {
-        
         tableView.register(UINib(nibName: "SampleShimmerTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    // MARK: - IBActions
-    
-    
-    
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 extension Sample1VC: UITableViewDelegate, UITableViewDataSource {
     
